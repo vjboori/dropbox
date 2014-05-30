@@ -1,4 +1,4 @@
-var pluginName = "dropbox",
+var pluginName = "DropboxSync",
     exec = cordova.require("cordova/exec");
     
 function DropboxSync() {

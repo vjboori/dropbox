@@ -1,4 +1,4 @@
-package com.vijay.dropbox;
+package com.rossmartin.DropboxSync;
 
 import org.apache.cordova.*;
 import org.json.JSONArray;
@@ -42,8 +42,8 @@ import com.dropbox.sync.android.DbxSyncStatus;
 public class DropboxSync extends CordovaPlugin {
     
     private static final String TAG = "DropboxSync";
-    private static final String APP_KEY = "2kv0vm2rdr4wgif"; // Your app key here
-    private static final String APP_SECRET = "5h0d9jesq8dxh12"; // Your app secret here
+    private static final String APP_KEY = "81v5tm7jg21zk8c"; // Your app key here
+    private static final String APP_SECRET = "f9cwicck72tuhpx"; // Your app secret here
     static final int REQUEST_LINK_TO_DBX = 1337;  // This value is up to you
     private DbxAccountManager mDbxAcctMgr;
     
