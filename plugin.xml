@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    id="com.vijay.dropbox"
+    id="com.rossmartin.DropboxSync"
     version="1.0.0">
     
     <name>Dropbox Sync</name>
@@ -12,7 +12,7 @@
     <keywords>Dropbox, Dropbox Sync, Dropbox Upload, Dropbox Download</keywords>
     <license>MIT</license>
 
-    <js-module src="www/js/dropbox.js" name="DropboxSync">
+    <js-module src="www/dropbox-sync.js" name="DropboxSync">
         <clobbers target="window.DropboxSync" />
     </js-module>
 
@@ -24,7 +24,7 @@
     <platform name="android">
         <config-file target="config.xml" parent="/*">
             <feature name="DropboxSync">
-                <param name="android-package" value="com.vijay.dropbox.dropbox" />
+                <param name="android-package" value="com.rossmartin.DropboxSync.DropboxSync" />
             </feature>
         </config-file>
         <!-- add to manifest -->
@@ -35,7 +35,7 @@
             <activity android:name="com.dropbox.sync.android.DbxAuthActivity" />
             <activity android:launchMode="singleTask" android:name="com.dropbox.client2.android.AuthActivity">
                 <intent-filter>
-                    <data android:scheme="db-2kv0vm2rdr4wgif" /><!-- replace this with your app key -->
+                    <data android:scheme="db-81v5tm7jg21zk8c" /><!-- replace this with your app key -->
                     <action android:name="android.intent.action.VIEW" />
                     <category android:name="android.intent.category.BROWSABLE" />
                     <category android:name="android.intent.category.DEFAULT" />
@@ -44,7 +44,7 @@
             <service android:enabled="true" android:exported="false" android:label="Dropbox Sync" android:name="com.dropbox.sync.android.DbxSyncService" />
         </config-file>
         <!-- add plugin class -->
-        <source-file src="src/android/DropboxSync.java" target-dir="src/com/vijay/dropbox" />
+        <source-file src="src/android/DropboxSync.java" target-dir="src/com/rossmartin/DropboxSync" />
         <!-- add Dropbox Sync API libs -->
         <source-file src="src/android/dropbox-sync-sdk-android.jar" target-dir="libs" />
         <source-file src="src/android/android-support-v4.jar" target-dir="libs" />
